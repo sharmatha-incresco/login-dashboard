@@ -11,19 +11,41 @@ import Signin from "./screens/login";
 import Students from "./screens/students";
 //import Home from "./nav_bar/home";
 //import Studdd from "./nav_bar/Students";
+import Signup from "./screens/signup"
+import Update from "./screens/update";
+import awsConfig from './aws-exports';
+import { Amplify } from "aws-amplify";
+import Forgetpassword from "./screens/forgetpassword";
 
+Amplify.configure(awsConfig);
 const router = createBrowserRouter([
   {
     path: "/home",
-    element: <Home/>,
+    element: <Home />,
   },
   {
     path: "/",
-    element: <Signin/>,
+    element: <Signin />,
   },
   {
     path: "/students",
-    element: <Students/>,
+    element: <Students />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/update",
+    element: <Update />,
+  },
+  {
+    path: "/update",
+    element: <Update />,
+  },
+  {
+    path: "/forgetpassword",
+    element: <Forgetpassword />,
   },
 ]);
 
